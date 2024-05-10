@@ -21,6 +21,13 @@ php artisan db:seed
 Finally open any terminal and navigate to this project and run this commands:
 Terminal 1: php artisan serve
 
+Navigate to the browser and visit the Login link
+
+## Login Process:
+Enter the following number and click generate OTP: 9123456789
+In the console of your browser you will get your OTP.
+Enter OTP in the otp field and click login.
+
 
 ## About App
 This app contains normal CRUD operation to manage users, state, city, pin codes.

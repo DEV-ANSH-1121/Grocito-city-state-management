@@ -35,7 +35,7 @@
 				<form method="post" action="{{ route('login') }}">
                     @csrf
 					<div class="input-group form-group">
-						<input type="text" class="form-control" placeholder="Enter Phone" id="phone_no" name="phone_no" value="{{ old('phone_no') }}">
+						<input type="text" class="form-control" placeholder="Enter Phone" id="phone_no" name="phone_no" value="{{ old('phone_no') ?? '9123456789' }}">
                         <div class="input-group-append">
 							<span class="input-group-text btn btn-sm btn-primary text-dark generateOtp">Generate OTP</span>
 						</div>
