@@ -34,8 +34,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Code</th>
-                    <th>Area</th>
+                    <th>@sortablelink('pin_code', 'Code')</th>
+                    <th>@sortablelink('city.name', 'Area')</th>
                     <th>State</th>
                     <th>Action</th>
                 </tr>

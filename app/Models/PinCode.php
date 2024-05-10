@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
+use Kyslik\ColumnSortable\Sortable;
 
 class PinCode extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Sortable;
 
     /**
      * The attributes that are mass assignable.
@@ -17,6 +18,17 @@ class PinCode extends Model
      * @var array
      */
     protected $fillable = [
+        'name',
+        'pin_code',
+        'city_id',
+    ];
+
+    /**
+     * The attributes that are sortable.
+     *
+     * @var array
+     */
+    public $sortable = [
         'name',
         'pin_code',
         'city_id',

@@ -15,7 +15,7 @@ class StateController extends Controller
      */
     public function index(Request $request)
     {
-        $states = State::filter($request->search)->paginate(10);
+        $states = State::sortable()->filter($request->search)->paginate(10);
         if($request->ajax()){
             foreach ($states as $state) {
                 $formatted_states[] = ['id' => $state->id, 'text' => $state->name];

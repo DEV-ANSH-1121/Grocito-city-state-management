@@ -34,8 +34,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>State</th>
+                    <th>@sortablelink('name', 'Name')</th>
+                    <th>@sortablelink('state.name', 'State')</th>
                     <th>Action</th>
                 </tr>
             </thead>

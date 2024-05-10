@@ -16,7 +16,7 @@ class CityController extends Controller
      */
     public function index(Request $request)
     {
-        $cities = City::filter($request->search)->paginate(10);
+        $cities = City::sortable()->filter($request->search)->paginate(10);
         if($request->ajax()){
             foreach ($cities as $city) {
                 $formatted_cities[] = ['id' => $city->id, 'text' => $city->name];

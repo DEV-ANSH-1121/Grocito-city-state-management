@@ -16,7 +16,7 @@ class PinCodeController extends Controller
      */
     public function index(Request $request)
     {
-        $pinCodes = PinCode::filter($request->search)->paginate(10);
+        $pinCodes = PinCode::sortable()->filter($request->search)->paginate(10);
         if($request->ajax()){
             foreach ($pinCodes as $pinCode) {
                 $formatted_pinCodes[] = [

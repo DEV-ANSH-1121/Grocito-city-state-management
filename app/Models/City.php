@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Kyslik\ColumnSortable\Sortable;
 
 class City extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Sortable;
 
     /**
      * The attributes that are mass assignable.
@@ -18,6 +19,16 @@ class City extends Model
      * @var array
      */
     protected $fillable = [
+        'name',
+        'state_id',
+    ];
+
+    /**
+     * The attributes that are sortable.
+     *
+     * @var array
+     */
+    public $sortable = [
         'name',
         'state_id',
     ];

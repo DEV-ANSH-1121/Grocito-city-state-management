@@ -34,12 +34,12 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>@sortablelink('name', 'Name')</th>
+                    <th>@sortablelink('email', 'Email')</th>
                     <th>State</th>
                     <th>City</th>
-                    <th>Pincode</th>
-                    <th>Registered At</th>
+                    <th>@sortablelink('pinCode.pin_code', 'Pincode')</th>
+                    <th>@sortablelink('create_at', 'Registered At') </th>
                     <th>Action</th>
                 </tr>
             </thead>
