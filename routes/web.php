@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PinCodeController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\User\ProfileController;
 use App\Http\Middleware\AdminAuth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' ,'middleware' => [AdminAuth:
 });
 
 Route::group(['prefix' => 'user', 'as' => 'user.' ,'middleware' => ['auth']] , function(){
-    Route::get('/', 'User\ProfileController@index')->name('index');
+    Route::get('/', [ProfileController::class,'index'])->name('index');
 });

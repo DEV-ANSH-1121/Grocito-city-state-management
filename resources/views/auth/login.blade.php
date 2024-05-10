@@ -37,7 +37,7 @@
 					<div class="input-group form-group">
 						<input type="text" class="form-control" placeholder="Enter Phone" id="phone_no" name="phone_no" value="{{ old('phone_no') }}">
                         <div class="input-group-append">
-							<span class="input-group-text btn btn-sm btn-primary generateOtp">Generate OTP</span>
+							<span class="input-group-text btn btn-sm btn-primary text-dark generateOtp">Generate OTP</span>
 						</div>
 					</div>
                     <div class="phone_no_message mb-4">
@@ -61,7 +61,7 @@
 				</form>
 			</div>
 			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
+				<div class="d-flex justify-content-center links pb-2">
 					Don't have an account?<a href="{{ route('register') }}">Sign Up</a>
 				</div>
 			</div>
